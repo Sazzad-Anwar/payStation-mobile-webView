@@ -1,0 +1,46 @@
+.header,.bottom{
+    background-color: #8C3493 !important;
+}
+.border-x-radius{
+    border-radius: 30px;
+}
+.notification{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    border-radius: 53%;
+    font-size: 9px;
+    background-color: red;
+    padding: 4px;
+}
+
+.text-purple{
+    color: #8C3493 !important;
+}
+
+.icon{
+    height: 55px;
+    background-color: #dfdada;
+    padding: 5px;
+    border-radius: 50%;
+}
+.showBalance{
+    transition: 1s ease-in;
+}
+a{
+    text-decoration: none !important;
+}
+
+.fixed-bottom{
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+}
+
+.fixed-top{
+    position: fixed;
+    top: 0px;
+}
+.body{
+    margin-top: 152px;
+}
