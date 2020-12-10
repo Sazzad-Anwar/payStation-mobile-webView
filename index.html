@@ -82,28 +82,30 @@
 
     <!-- functional options portion -->
     <div class="container body uk-overflow-auto">
+
         <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-xlarge mb-3">
             <form>
 
                 <!-- Input for phone number -->
+                <h4 class="uk-margin-remove-top pt-0 uk-margin-remove-bottom pb-2">Mobile Recharge</h4>
+
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
                     </div>
-                    <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0" style="border-left: none;border-right: none;" autocomplete="off">
+                    <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0" style="border-left: none;border-right: none;" required autocomplete="off">
                     <div class="input-group-append">
-                        <span class="form-control left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""></span>
+                        <span class="form-control left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""><span id="dropDown" uk-icon="icon:  chevron-down; ratio: 1"></span></span>
                     </div>
-                    <div class="input-group-append uk-hidden">
-                        <select class="form-control left-border-radius-off operator border-color py-2" id="exampleFormControlSelect1" name="operator">
-                            <option class="option" value="gp">GP</option>
-                            <option class="option" value="robi" id="robi">ROBI</option>
-                            <option class="option" value="banglalink">BANGLALINK</option>
-                            <option class="option" value="airtel">AIRTEL</option>
-                            <option class="option" value="teletalk">TELETALK</option>
-                        </select>
-                    </div>
-                    <br>
+                </div>
+                <div class="my-2" id="operator-select">
+                    <select class="form-control operator border-color py-2" id="operator-selection" name="operator">
+                        <option class="option" value="gp">GP</option>
+                        <option class="option" value="robi" id="robi">ROBI</option>
+                        <option class="option" value="banglalink">BANGLALINK</option>
+                        <option class="option" value="airtel">AIRTEL</option>
+                        <option class="option" value="teletalk">TELETALK</option>
+                    </select>
                 </div>
                 <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="phone_number_error"></p>
 
@@ -113,7 +115,7 @@
                         <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
                             style="height: 30px;padding-top: 10px;">
                         <input class="uk-input uk-border-rounded" name="amount" id="amount" placeholder="Amount"
-                            type="number" autocomplete="off">
+                            type="number" autocomplete="off" required>
                     </div>
                     <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
                 </div>
@@ -121,9 +123,12 @@
                 <!-- input for package type -->
                 <div class="uk-margin">
                     <select class="uk-select uk-border-rounded text-purple" id="package" required>
-                        <option selected class="text-purple">Package Type</option>
-                        <option class="text-purple">Prepaid</option>
-                        <option class="text-purple">Postpaid</option>
+                        <option class="text-purple" value="prepaid" selected>Prepaid</option>
+                        <option class="text-purple" value="postpaid">Postpaid</option>
+                        <option id="skitto" class="text-purple uk-hidden" value="skitto">Skitto</option>
+                        <option id="gstore" class="text-purple uk-hidden" value="gstore">G-store</option>
+                        <option id="tong" class="text-purple uk-hidden" value="tong">Tong</option>
+                        <option id="amarOffer" class="text-purple uk-hidden" value="amarOffer">Amar Offer</option>
                     </select>
                 </div>
 
@@ -132,8 +137,31 @@
             </form>
         </div>
 
+        <!-- ad poster or banner portion -->
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded  p-0">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull;autoplay:true;autoplay-interval:4000">
+
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <div class="uk-position-cover uk-animation-reverse uk-transform-origin-center-left">
+                            <img src="./assets/images/banner2.jpeg" class="uk-border-rounded" alt="banner-image" style="height: 100px;width: 100%;">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-position-cover uk-animation-reverse uk-transform-origin-top-right">
+                            <img src="./assets/images/banner3.jpeg" class="uk-border-rounded" alt="banner-image">
+                        </div>
+                    </li>
+                </ul>
+            
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            
+            </div>
+        </div>
+
         <!-- set a bottom height as the main navigation has -->
-        <br><br><br>
+        <div style="height: 30px;"></div>
     </div>
 
     <!-- bottom navigation portion -->

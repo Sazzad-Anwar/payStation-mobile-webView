@@ -13,69 +13,107 @@ $(document).ready(function () {
     });
 
     //handle the empty number field or invalid phone number and recharge amount
-    document.getElementById('recharge').addEventListener('click',e=>{
-        e.preventDefault();
-        let phoneNumber = document.getElementById('phone_number');
-        let amount = document.getElementById('amount');
-        let amountError = document.getElementById('amount_error');
-        let phoneNumberError = document.getElementById("phone_number_error")
-        console.log(Number(amount.value));
 
-        if((phoneNumber.value).length === 0 ){
-            phoneNumberError.innerHTML = 'Phone number can not be null';
-        }else{
-            phoneNumberError.innerHTML = '';
+    let phoneNumber = document.getElementById('phone_number');
+    let amount = document.getElementById('amount');
+    let amountError = document.getElementById('amount_error');
+    let phoneNumberError = document.getElementById("phone_number_error");
+
+    $("#phone_number").on('input',e=>{
+        e.preventDefault();
+        if((phoneNumber.value).length === null){
+            phoneNumberError.innerHTML = 'This field can not be empty';
         }
-        if((phoneNumber.value).length > 11 || (phoneNumber.value).length < 11){
+        else if((phoneNumber.value).length > 11 || (phoneNumber.value).length < 11 ){
             phoneNumberError.innerHTML = 'Invalid phone number';
         }else{
             phoneNumberError.innerHTML = '';
         }
+        
+    });
+
+    $("#amount").on('input',e=>{
+        e.preventDefault();
+
         if(Number(amount.value) === 0 || Number(amount.value) < 10){
             amountError.innerHTML = 'Amount can not be below 10';
         }else{
             amountError.innerHTML = '';
         }
-    });
+    })
     
     //on input the phone number the operator logo will be shown and operator name will be selected from the option select
-    $('#phone_number').change(e=>{
+    $('#phone_number').on("input",e=>{
         e.preventDefault();
-
-        
 
         if((($('#phone_number').val()).toString()).startsWith('017') || (($('#phone_number').val()).toString()).startsWith('013')){
             $("select option[value='gp']").attr('selected',"selected");
-            $("#operator_image").attr("src","./assets/images/Grameephone_Logo.png")
-            let opition = new Option("Skitto", "skitto");
-            $("#package").append(opition);
+            $("#operator_image").attr("src","./assets/images/Grameephone_Logo.png");
+            $("#skitto").removeClass('uk-hidden');
+            $("#gstore").addClass('uk-hidden');
+            $("#tong").addClass('uk-hidden');
+            $("#amarOffer").addClass('uk-hidden');
         }
-        if((($('#phone_number').val()).toString()).startsWith('018')){
+        else if((($('#phone_number').val()).toString()).startsWith('018')){
             $("select option[value='robi']").attr('selected',"selected");
             $("#operator_image").attr("src","./assets/images/robilogo.png")
-            let opition = new Option("G-store", "gstore");
-            $("#package").append(opition);
+            $("#skitto").addClass('uk-hidden');
+            $("#gstore").removeClass('uk-hidden');
+            $("#tong").addClass('uk-hidden');
+            $("#amarOffer").addClass('uk-hidden');
         }
-        if((($('#phone_number').val()).toString()).startsWith('016')){
+        else if((($('#phone_number').val()).toString()).startsWith('016')){
             $("select option[value='airtel']").attr('selected',"selected");
             $("#operator_image").attr("src","./assets/images/Airtel_logo.svg")
-            let opition = new Option("Tong", "tong");
-            $("#package").append(opition);
+            $("#skitto").addClass('uk-hidden');
+            $("#gstore").addClass('uk-hidden');
+            $("#tong").removeClass('uk-hidden');
+            $("#amarOffer").addClass('uk-hidden');
         }
-        if((($('#phone_number').val()).toString()).startsWith('019')){
+        else if((($('#phone_number').val()).toString()).startsWith('019')){
             $("select option[value='banglalink']").attr('selected',"selected");
             $("#operator_image").attr("src","./assets/images/Banglalink_logo.png")
-            let opition = new Option("Amar Offer", "amarOffer");
-            $("#package").append(opition);
+            $("#skitto").addClass('uk-hidden');
+            $("#gstore").addClass('uk-hidden');
+            $("#tong").addClass('uk-hidden');
+            $("#amarOffer").removeClass('uk-hidden');
         }
-        if((($('#phone_number').val()).toString()).startsWith('015')){
+        else if((($('#phone_number').val()).toString()).startsWith('015')){
             $("select option[value='teletalk']").attr('selected',"selected");
             $("#operator_image").attr("src","./assets/images/teletalk_logo.svg");
+        }else{
+            $("#operator_image").attr("src"," ");
+            phoneNumberError.innerHTML = 'Invalid phone number';
         }
     });
-    
-    $('#alert').click(e=>{
+
+    //function for showing the options on cliking the chevron-down icon in phone Number input
+    $('#operator-select').hide();
+    $('#dropDown').on('click',e =>{
         e.preventDefault();
-        alert('Add Balance');
+        $('#operator-select').show();
+        setTimeout(()=>{
+            $('#operator-select').hide();
+        },4000)
+    });
+
+    $("#operator-selection").on('change',e=>{
+        e.preventDefault();
+
+        if($("#operator-selection").val() === 'gp' ){
+            $("#operator_image").attr("src","./assets/images/Grameephone_Logo.png");
+        }
+        else if($("#operator-selection").val() ==='airtel'){
+            $("#operator_image").attr("src","./assets/images/Airtel_logo.svg")
+        }
+        else if($("#operator-selection").val() ==='banglalink'){
+            $("#operator_image").attr("src","./assets/images/Banglalink_logo.png")
+        }
+        else if($("#operator-selection").val() ==='robi'){
+            $("#operator_image").attr("src","./assets/images/robilogo.png")
+        }
+        else if($("#operator-selection").val() ==='teletalk'){
+            $("#operator_image").attr("src","./assets/images/teletalk_logo.svg");
+        }
     })
 });
