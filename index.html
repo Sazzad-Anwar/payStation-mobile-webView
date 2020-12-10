@@ -90,7 +90,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
                     </div>
-                    <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0" style="border-left: none;border-right: none;">
+                    <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0" style="border-left: none;border-right: none;" autocomplete="off">
                     <div class="input-group-append">
                         <span class="form-control left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""></span>
                     </div>
@@ -113,14 +113,14 @@
                         <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
                             style="height: 30px;padding-top: 10px;">
                         <input class="uk-input uk-border-rounded" name="amount" id="amount" placeholder="Amount"
-                            type="number">
+                            type="number" autocomplete="off">
                     </div>
                     <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
                 </div>
 
                 <!-- input for package type -->
                 <div class="uk-margin">
-                    <select class="uk-select uk-border-rounded text-purple">
+                    <select class="uk-select uk-border-rounded text-purple" required>
                         <option selected class="text-purple">Package Type</option>
                         <option class="text-purple">Prepaid</option>
                         <option class="text-purple">Postpaid</option>
