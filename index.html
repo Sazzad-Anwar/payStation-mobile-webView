@@ -7,17 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#8C3493">
     <meta name="Description" content="Enter your description here" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery.min.js"></script>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/uikit.min.css">
+    <link rel="stylesheet" href="./assets/css/uikit.css">
     <script src="./assets/js/uikit.min.js"></script>
     <script src="./assets/js/uikit-icons.js"></script>
     <script src="./assets/js/index.js"></script>
+
     <title>Home</title>
 </head>
 
@@ -27,29 +28,34 @@
     <!-- logo and navigation portion -->
     <div class="container header fixed-top">
         <div class="row pt-2">
-            <div class="col-3"><span class="float-left pt-3 text-white" uk-icon="icon: menu; ratio: 1.3" style="font-size: 25px;" uk-toggle="target: #offcanvas-flip"></span></div>
-            <div class="col-6"><img class="text-center" src="./assets/images/184568.svg" style="height: 63px;padding: 0px 32px;" alt="rocket-logo"></div>
             <div class="col-3">
                 <div>
-                    <span class="float-right pt-3 text-white" uk-icon="icon: bell; ratio: 1.3"></span>
+                    <span class="float-left pt-3 text-white" uk-icon="icon: bell; ratio: 1.3"></span>
                     <span class="badge badge-pill badge-primary notification">10</span>
                 </div>
             </div>
+            <div class="col-6"><img class="text-center" src="./assets/images/Group.png"
+                    style="height: 43px;padding: 0px 20px;padding-top: 10px;" alt="rocket-logo"></div>
+            <div class="col-3"><span class="float-right pt-3 text-white" uk-icon="icon: menu; ratio: 1.3"
+                    style="font-size: 25px;" uk-toggle="target: #offcanvas-flip"></span></div>
         </div>
 
         <!-- off-canvas reveal -->
-        <div id="offcanvas-flip" uk-offcanvas="overlay: true">
+        <div id="offcanvas-flip" uk-offcanvas="flip:true; overlay: true">
             <div class="uk-offcanvas-bar p-0">
-        
+
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
-                
+
                 <div class="header">
-                    <img class="text-center" src="./assets/images/184568.svg" style="height: 83px;padding: 0px 32px;" alt="rocket-logo">
+                    <img class="text-center" src="./assets/images/Group.png" style="height: 53px;padding: 10px 40px;"
+                        alt="rocket-logo">
                 </div>
                 <div class="container mt-3">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-        
+
             </div>
         </div>
 
@@ -60,11 +66,16 @@
             </div>
             <div class="uk-width-expand">
                 <p class="uk-margin-remove-bottom text-white" style="font-size: 12px;">MD. ASADUJJAMAN ASAD</p>
-                <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom text-white" style="font-size: 12px;">017112421485</p>
-                <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom text-white" style="font-size: 10px;">CORPORATE_SALARY</p>
+                <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom text-white"
+                    style="font-size: 12px;">017112421485</p>
+                <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom text-white"
+                    style="font-size: 10px;">CORPORATE_SALARY</p>
             </div>
             <div style="width: 130px;">
-                <p class="uk-margin-remove-bottom text-center bg-white px-3 py-1 border-x-radius" id="showBalance" style="color: #8C3493;"> <span id="balanceTitle" style="font-size: 11px;" class="showBalance">Tap for Balance</span> <span style="font-size: 12px;" id="balance" class="showBalance">5000.00 TK</span></p>
+                <p class="uk-margin-remove-bottom text-center bg-white px-3 py-1 border-x-radius" id="showBalance"
+                    style="color: #8C3493;"> <span id="balanceTitle" style="font-size: 11px;" class="showBalance">Tap
+                        for Balance</span> <span style="font-size: 12px;" id="balance" class="showBalance">5000.00
+                        TK</span></p>
             </div>
         </div>
     </div>
@@ -72,53 +83,57 @@
     <!-- functional options portion -->
     <div class="container body uk-overflow-auto">
         <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-xlarge mb-3">
-            <div class="uk-grid-medium uk-child-width-1-3" uk-grid>
-                <div class="text-center">
-                    <img src="./assets/images/addMoney.svg" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Add Balance</a>
+            <form>
+
+                <!-- Input for phone number -->
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
+                    </div>
+                    <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0" style="border-left: none;border-right: none;">
+                    <div class="input-group-append">
+                        <span class="form-control left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""></span>
+                    </div>
+                    <div class="input-group-append uk-hidden">
+                        <select class="form-control left-border-radius-off operator border-color py-2" id="exampleFormControlSelect1" name="operator">
+                            <option class="option" value="gp">GP</option>
+                            <option class="option" value="robi" id="robi">ROBI</option>
+                            <option class="option" value="banglalink">BANGLALINK</option>
+                            <option class="option" value="airtel">AIRTEL</option>
+                            <option class="option" value="teletalk">TELETALK</option>
+                        </select>
+                    </div>
+                    <br>
                 </div>
-                <div class="text-center">
-                    <img src="./assets/images/mobile_banking.PNG" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Mobile Banking</a>
+                <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="phone_number_error"></p>
+
+                <!-- input for recharge amount -->
+                <div class="uk-margin">
+                    <div class="uk-inline uk-width-1-1">
+                        <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
+                            style="height: 30px;padding-top: 10px;">
+                        <input class="uk-input uk-border-rounded" name="amount" id="amount" placeholder="Amount"
+                            type="number">
+                    </div>
+                    <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
                 </div>
-                <div class="text-center">
-                    <img src="./assets/images/billPay.svg" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Bill Pay</a>
+
+                <!-- input for package type -->
+                <div class="uk-margin">
+                    <select class="uk-select uk-border-rounded text-purple">
+                        <option selected class="text-purple">Package Type</option>
+                        <option class="text-purple">Prepaid</option>
+                        <option class="text-purple">Postpaid</option>
+                        <option class="text-purple">Skitto</option>
+                    </select>
                 </div>
-            </div>
+
+                <button class="uk-button uk-button-primary form-control uk-border-rounded" type="submit"
+                    id="recharge">Recharge</button>
+            </form>
         </div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-xlarge mb-3">
-            <div class="uk-grid-medium uk-child-width-1-3" uk-grid>
-                <div class="text-center">
-                    <img src="./assets/images/addMoney.svg" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Add Balance</a>
-                </div>
-                <div class="text-center">
-                    <img src="./assets/images/mobile_banking.PNG" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Mobile Banking</a>
-                </div>
-                <div class="text-center">
-                    <img src="./assets/images/billPay.svg" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Bill Pay</a>
-                </div>
-            </div>
-        </div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-xlarge mb-3">
-            <div class="uk-grid-medium uk-child-width-1-3" uk-grid>
-                <div class="text-center">
-                    <img src="./assets/images/addMoney.svg" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Add Balance</a>
-                </div>
-                <div class="text-center">
-                    <img src="./assets/images/mobile_banking.PNG" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Mobile Banking</a>
-                </div>
-                <div class="text-center">
-                    <img src="./assets/images/billPay.svg" class="icon" alt="addMoney-logo">
-                    <a class="text-purple uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 14px;">Bill Pay</a>
-                </div>
-            </div>
-        </div>
+
+        <!-- set a bottom height as the main navigation has -->
         <br><br><br>
     </div>
 
@@ -126,19 +141,29 @@
     <div class="uk-container fixed-bottom bottom py-3">
         <div class="uk-grid-large px-3 uk-child-width-1-3" uk-grid>
             <div class="text-center">
-                <span uk-icon="icon: location; ratio: 1.3" class="text-white"></span>
-                <p class="text-white uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 12px;">LOCATIONS</p>
+                <a href="/">
+                    <img src="./assets/images/addMoney.svg" class="navIcon" alt="addMoney-logo">
+                    <p class="text-white uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 12px;">Add
+                        Balance</p>
+                </a>
             </div>
             <div class="text-center">
-                <i class="fas fa-qrcode text-white" style="font-size: 25px;"></i>
-                <p class="text-white uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 12px;">SCAN QR</p>
+                <a href="/">
+                    <img src="./assets/images/mobile_banking.PNG" class="navIcon" alt="addMoney-logo">
+                    <p class="text-white uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 12px;">Mobile
+                        Banking</p>
+                </a>
             </div>
             <div class="text-center">
-                <i class="fas fa-gifts text-white" style="font-size: 25px;"></i>
-                <p class="text-white uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 12px;">OFFERS</p>
+                <a href="/">
+                    <img src="./assets/images/billPay.svg" class="navIcon" alt="addMoney-logo">
+                    <p class="text-white uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 12px;">Bill Pay
+                    </p>
+                </a>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

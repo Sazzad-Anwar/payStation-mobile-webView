@@ -1,12 +1,15 @@
-.header,.bottom{
-    background-color: #8C3493 !important;
+.header,
+.bottom {
+    background-color: #652B82 !important;
 }
-.border-x-radius{
+
+.border-x-radius {
     border-radius: 30px;
 }
-.notification{
+
+.notification {
     position: absolute;
-    right: 10px;
+    left: 25px;
     top: 15px;
     border-radius: 53%;
     font-size: 9px;
@@ -14,33 +17,103 @@
     padding: 4px;
 }
 
-.text-purple{
-    color: #8C3493 !important;
+.text-purple {
+    color: #652B82 !important;
 }
 
-.icon{
+.bg-purple {
+    background-color: #652B82 !important;
+}
+
+.icon {
     height: 55px;
     background-color: #dfdada;
     padding: 5px;
     border-radius: 50%;
 }
-.showBalance{
+
+.navIcon {
+    height: 45px;
+    background-color: #ffff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.showBalance {
     transition: 1s ease-in;
 }
-a{
+
+a {
     text-decoration: none !important;
 }
 
-.fixed-bottom{
+.fixed-bottom {
     position: fixed;
     bottom: 0px;
     width: 100vw;
 }
 
-.fixed-top{
+.fixed-top {
     position: fixed;
     top: 0px;
 }
-.body{
+
+.body {
     margin-top: 152px;
+}
+
+input {
+    color: #652B82 !important;
+}
+
+.border-color {
+    border-color: #652B82 !important;
+}
+
+.right-border-radius-off {
+    border-right: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.left-border-radius-off {
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+::selection,
+select:focus::-ms-value {
+    background-color: #d7a7f0;
+    color: #652B82;
+}
+
+option:checked {
+    background-color: #d7a7f0;
+    color: #652B82;
+}
+
+option:checked:hover,
+select:focus option:checked:hover {
+    background-color: #d7a7f0;
+    color: #652B82;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.option{
+    float: right !important;
+    padding-right: 0px !important;
+}
+
+.uk-radio{
+    height: 20px !important;
+    width: 20px !important;
 }
