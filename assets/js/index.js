@@ -44,23 +44,33 @@ $(document).ready(function () {
 
         if((($('#phone_number').val()).toString()).startsWith('017') || (($('#phone_number').val()).toString()).startsWith('013')){
             $("select option[value='gp']").attr('selected',"selected");
-            $("#operator_image").attr("src","./assets/images/Grameephone_Logo.png")
+            setTimeout(()=>{
+                $("#operator_image").attr("src","./assets/images/Grameephone_Logo.png")
+            },500)
         }
         if((($('#phone_number').val()).toString()).startsWith('018')){
             $("select option[value='robi']").attr('selected',"selected");
-            $("#operator_image").attr("src","./assets/images/robilogo.png")
+            setTimeout(()=>{
+                $("#operator_image").attr("src","./assets/images/robilogo.png")
+            },500)
         }
         if((($('#phone_number').val()).toString()).startsWith('016')){
             $("select option[value='airtel']").attr('selected',"selected");
-            $("#operator_image").attr("src","./assets/images/Airtel_logo.svg")
+            setTimeout(()=>{
+                $("#operator_image").attr("src","./assets/images/Airtel_logo.svg")
+            },500)
         }
         if((($('#phone_number').val()).toString()).startsWith('019')){
             $("select option[value='banglalink']").attr('selected',"selected");
-            $("#operator_image").attr("src","./assets/images/Banglalink_logo.png")
+            setTimeout(()=>{
+                $("#operator_image").attr("src","./assets/images/Banglalink_logo.png")
+            },500)
         }
         if((($('#phone_number').val()).toString()).startsWith('015')){
             $("select option[value='teletalk']").attr('selected',"selected");
-            $("#operator_image").attr("src","./assets/images/teletalk_logo.svg");
+            setTimeout(()=>{
+                $("#operator_image").attr("src","./assets/images/teletalk_logo.svg");
+            },500)
         }
     });
     
