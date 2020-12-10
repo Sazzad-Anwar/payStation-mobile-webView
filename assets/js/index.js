@@ -102,15 +102,31 @@ $(document).ready(function () {
 
         if($("#operator-selection").val() === 'gp' ){
             $("#operator_image").attr("src","./assets/images/Grameephone_Logo.png");
+            $("#skitto").removeClass('uk-hidden');
+            $("#gstore").addClass('uk-hidden');
+            $("#tong").addClass('uk-hidden');
+            $("#amarOffer").addClass('uk-hidden');
         }
         else if($("#operator-selection").val() ==='airtel'){
-            $("#operator_image").attr("src","./assets/images/Airtel_logo.svg")
+            $("#operator_image").attr("src","./assets/images/Airtel_logo.svg");
+            $("#skitto").addClass('uk-hidden');
+            $("#gstore").addClass('uk-hidden');
+            $("#tong").removeClass('uk-hidden');
+            $("#amarOffer").addClass('uk-hidden');
         }
         else if($("#operator-selection").val() ==='banglalink'){
-            $("#operator_image").attr("src","./assets/images/Banglalink_logo.png")
+            $("#operator_image").attr("src","./assets/images/Banglalink_logo.png");
+            $("#skitto").addClass('uk-hidden');
+            $("#gstore").addClass('uk-hidden');
+            $("#tong").addClass('uk-hidden');
+            $("#amarOffer").removeClass('uk-hidden');
         }
         else if($("#operator-selection").val() ==='robi'){
-            $("#operator_image").attr("src","./assets/images/robilogo.png")
+            $("#operator_image").attr("src","./assets/images/robilogo.png");
+            $("#skitto").addClass('uk-hidden');
+            $("#gstore").removeClass('uk-hidden');
+            $("#tong").addClass('uk-hidden');
+            $("#amarOffer").addClass('uk-hidden');
         }
         else if($("#operator-selection").val() ==='teletalk'){
             $("#operator_image").attr("src","./assets/images/teletalk_logo.svg");
