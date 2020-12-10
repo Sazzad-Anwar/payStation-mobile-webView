@@ -74,4 +74,8 @@ $(document).ready(function () {
         }
     });
     
+    $('#alert').click(e=>{
+        e.preventDefault();
+        alert('Add Balance');
+    })
 });
