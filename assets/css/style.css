@@ -52,7 +52,7 @@ a {
 }
 
 .fixed-bottom {
-    position: fixed;
+    position: -webkit-sticky;
     bottom: 0px;
     width: 100vw;
 }
