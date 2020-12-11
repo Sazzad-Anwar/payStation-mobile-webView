@@ -25,6 +25,10 @@
     background-color: #652B82 !important;
 }
 
+input::placeholder{
+    color: #652B82 !important
+}
+
 .icon {
     height: 55px;
     background-color: #dfdada;
