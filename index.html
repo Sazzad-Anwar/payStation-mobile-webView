@@ -88,16 +88,35 @@
 
                 <!-- Input for phone number -->
                 <h4 class="uk-margin-remove-top pt-0 uk-margin-remove-bottom pb-2">Mobile Recharge</h4>
+            
+                <div class="uk-grid-collapse" uk-grid>
 
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
+                    <div class="uk-width-3-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
+                            </div>
+                            <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0 pr-0" style="border-left: none;border-right: none;" required autocomplete="off">
+                            <div class="input-group-append">
+                                <span class="form-control p-0 left-border-radius-off right-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""><span id="dropDown" uk-icon="icon:  chevron-down; ratio: 1"></span></span>
+                            </div>
+                        </div>
                     </div>
-                    <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0" style="border-left: none;border-right: none;" required autocomplete="off">
-                    <div class="input-group-append">
-                        <span class="form-control left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""><span id="dropDown" uk-icon="icon:  chevron-down; ratio: 1"></span></span>
+
+                    <div class="uk-width-1-4">
+                        <!-- input for recharge amount -->
+                        <div class="uk-margin">
+                            <div class="uk-inline uk-width-1-1 ">
+                                <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
+                                    style="height: 30px;padding-top: 10px;;">
+                                <input class="uk-input left-border-radius-off px-0 uk-border-rounded" style="height: 42px;" name="amount" id="amount" placeholder="tk"
+                                    type="number" autocomplete="off" required>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
+
                 <div class="my-2" id="operator-select">
                     <select class="form-control operator border-color py-2" id="operator-selection" name="operator">
                         <option class="option" value="gp">GP</option>
@@ -107,18 +126,10 @@
                         <option class="option" value="teletalk">TELETALK</option>
                     </select>
                 </div>
+                <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
                 <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="phone_number_error"></p>
 
-                <!-- input for recharge amount -->
-                <div class="uk-margin">
-                    <div class="uk-inline uk-width-1-1">
-                        <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
-                            style="height: 30px;padding-top: 10px;">
-                        <input class="uk-input uk-border-rounded" name="amount" id="amount" placeholder="Amount"
-                            type="number" autocomplete="off" required>
-                    </div>
-                    <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
-                </div>
+                
 
                 <!-- input for package type -->
                 <div class="uk-margin">
