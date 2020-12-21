@@ -162,7 +162,8 @@ $(document).ready(function () {
     // animation for welcome page
     setTimeout(()=>{
         $('#welcome-part').addClass('magictime puffOut');
-        $('#body').children()[0].remove();
+        // $('#body').children()[0].remove();
+        $('#welcome-part').hide();
         $('.login-part').removeClass('uk-hidden');
         $('.login-part').addClass('magictime puffIn');
     },2000)
