@@ -121,3 +121,19 @@ button:focus {
     height: 20px !important;
     width: 20px !important;
 }
+
+.logoPart{
+    background-color: #652B82;
+    height: 250px;
+}
+
+.login-box{
+    margin: 0px 23px;
+    border: 1px solid #652B82;
+    border-radius: 6px;
+    z-index: 1;
+    position: relative;
+    bottom: 70px;
+    background: white;
+    max-height: 100vh !important;
+}

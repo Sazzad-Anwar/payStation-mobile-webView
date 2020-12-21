@@ -18,6 +18,10 @@ $(document).ready(function () {
     let amount = document.getElementById('amount');
     let amountError = document.getElementById('amount_error');
     let phoneNumberError = document.getElementById("phone_number_error");
+    let accNumber = document.getElementById("acc_number");
+    let pinNumber = document.getElementById("pin_number");
+    let accNumberError = document.getElementById("acc_number_error");
+    let pinNumberError = document.getElementById("pin_number_error");
 
     $("#phone_number").on('input',e=>{
         e.preventDefault();
@@ -40,7 +44,29 @@ $(document).ready(function () {
         }else{
             amountError.innerHTML = '';
         }
-    })
+    });
+
+    $("#acc_number").on('input',e=>{
+        e.preventDefault();
+        if((accNumber.value).length === null){
+            accNumberError.innerHTML = 'This field can not be empty';
+        }
+        else if((accNumber.value).length > 11 || (accNumber.value).length < 11 ){
+            accNumberError.innerHTML = 'Invalid Account number';
+        }else{
+            accNumberError.innerHTML = '';
+        }
+    });
+
+    $("#pin_number").on('input',e=>{
+        e.preventDefault();
+        if((pinNumber.value).length === null){
+            pinNumberError.innerHTML = 'This field can not be empty';
+        }
+        else{
+            pinNumberError.innerHTML = '';
+        }
+    });
     
     //on input the phone number the operator logo will be shown and operator name will be selected from the option select
     $('#phone_number').on("input",e=>{
@@ -131,5 +157,13 @@ $(document).ready(function () {
         else if($("#operator-selection").val() ==='teletalk'){
             $("#operator_image").attr("src","./assets/images/teletalk_logo.svg");
         }
-    })
+    });
+
+    // animation for welcome page
+    setTimeout(()=>{
+        $('#welcome-part').addClass('magictime puffOut');
+        $('#body').children()[0].remove();
+        $('.login-part').removeClass('uk-hidden');
+        $('.login-part').addClass('magictime puffIn');
+    },2000)
 });
