@@ -86,6 +86,9 @@ input {
     border-bottom-left-radius: 0px !important;
 }
 
+.bottom:focus{
+    display: none !important;
+}
 
 ::selection,
 select:focus::-ms-value {
