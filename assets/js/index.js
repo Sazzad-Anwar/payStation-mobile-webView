@@ -68,6 +68,24 @@ $(document).ready(function () {
         }
     });
     
+
+    $('#phone_number').focus(()=>{
+        $('.bottom').removeClass('fixed-bottom');
+    })
+
+    $('#phone_number').focusout(()=>{
+        $('.bottom').addClass('fixed-bottom');
+    })
+
+    $('#amount').focus(()=>{
+        $('.bottom').removeClass('fixed-bottom');
+    })
+
+    $('#amount').focusout(()=>{
+        $('.bottom').addClass('fixed-bottom');
+    })
+
+
     //on input the phone number the operator logo will be shown and operator name will be selected from the option select
     $('#phone_number').on("input",e=>{
         e.preventDefault();
