@@ -70,19 +70,19 @@ $(document).ready(function () {
     
 
     $('#phone_number').focus(()=>{
-        $('.bottom').removeClass('fixed-bottom');
+        $('.bottom').hide()
     })
 
     $('#phone_number').focusout(()=>{
-        $('.bottom').addClass('fixed-bottom');
+        $('.bottom').show();
     })
 
     $('#amount').focus(()=>{
-        $('.bottom').removeClass('fixed-bottom');
+        $('.bottom').hide();
     })
 
     $('#amount').focusout(()=>{
-        $('.bottom').addClass('fixed-bottom');
+        $('.bottom').show();
     })
 
 
