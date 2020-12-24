@@ -185,4 +185,14 @@ $(document).ready(function () {
         }
         lastScrollTop = st;
     });
+
+    $("#operator-selection, #recharge-status").select2({
+        tags: true,
+    });
+    
+    let date = new Date();
+
+    $('#from-date').val(date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear());
+    $('#to-date').val(new Date());
+
 });

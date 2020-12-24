@@ -8,13 +8,13 @@
 }
 
 .notification {
-    position: absolute;
-    left: 25px;
-    top: 15px;
-    border-radius: 53%;
-    font-size: 9px;
-    background-color: red;
-    padding: 4px;
+    position: absolute !important;
+    left: 25px !important;
+    top: 15px !important;
+    border-radius: 53% !important;
+    font-size: 9px !important;
+    background-color: red !important;
+    padding: 4px !important;
 }
 
 .text-purple {
@@ -25,26 +25,31 @@
     background-color: #652B82 !important;
 }
 
-input::placeholder{
+input::placeholder {
     color: #652B82 !important
 }
 
+.nav-color > li > a{
+    color: #652B82 !important;
+    font-weight: bold;
+}
+
 .icon {
-    height: 55px;
-    background-color: #dfdada;
-    padding: 5px;
-    border-radius: 50%;
+    height: 55px !important;
+    background-color: #dfdada !important;
+    padding: 5px !important;
+    border-radius: 50% !important;
 }
 
 .navIcon {
-    height: 45px;
-    background-color: #ffff;
-    border-radius: 50%;
-    padding: 5px;
+    height: 45px !important;
+    background-color: #ffff !important;
+    border-radius: 50% !important;
+    padding: 5px !important;
 }
 
 .showBalance {
-    transition: 1s ease-in;
+    transition: 1s ease-in !important;
 }
 
 a {
@@ -52,13 +57,13 @@ a {
 }
 
 .fixed-bottom {
-    position:fixed;
-    bottom: 0px;
-    width: 100vw;
+    position: fixed;
+    bottom: 0px !important;
+    width: 100vw !important;
 }
 
 .fixed-top {
-    position: fixed;
+    position: fixed !important;
     top: 0px;
 }
 
@@ -66,11 +71,11 @@ a {
     margin-top: 152px;
 }
 
-input {
+input,th {
     color: #652B82 !important;
 }
 
-.border-color {
+.border-color,.table-bordered {
     border-color: #652B82 !important;
 }
 
@@ -86,25 +91,25 @@ input {
     border-bottom-left-radius: 0px !important;
 }
 
-.bottom:focus{
+.bottom:focus {
     display: none !important;
 }
 
 ::selection,
 select:focus::-ms-value {
-    background-color: #d7a7f0;
-    color: #652B82;
+    background-color: #d7a7f0 !important;
+    color: #652B82 !important;
 }
 
 option:checked {
-    background-color: #d7a7f0;
-    color: #652B82;
+    background-color: #d7a7f0 !important;
+    color: #652B82 !important;
 }
 
 option:checked:hover,
 select:focus option:checked:hover {
-    background-color: #d7a7f0;
-    color: #652B82;
+    background-color: #d7a7f0 !important;
+    color: #652B82 !important;
 }
 
 input:focus,
@@ -115,32 +120,66 @@ button:focus {
     box-shadow: none !important;
 }
 
-.option{
+.option {
     float: right !important;
     padding-right: 0px !important;
 }
 
-.uk-radio{
+.uk-radio {
     height: 20px !important;
     width: 20px !important;
 }
 
-.logoPart{
+.logoPart {
     background-image: url("../images/logo_bg.png");
-    background-size: cover;
-    height: 250px;
+    background-size: cover !important;
+    height: 250px !important;
 }
 
-.login-box{
-    margin: 0px 23px;
-    border: 1px solid #652B82;
-    border-radius: 6px;
-    z-index: 1;
-    position: relative;
-    top:-85px;
-    background: white;
+.login-box {
+    margin: 0px 23px !important;
+    border: 1px solid #652B82 !important;
+    border-radius: 6px !important;
+    z-index: 1 !important;
+    position: relative !important;
+    top: -85px !important;
+    background: white !important;
 }
 
-.top-navigation{
-    transition: ease-out 1s;
+.top-navigation {
+    transition: ease-out 1s !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 40px !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-top: 4px !important;
+    color: #652B82 !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #652B82 !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-top: 3px !important;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: white;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: white;
 }

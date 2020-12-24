@@ -56,7 +56,7 @@
                 <div class="container mt-5 ml-4">
                     <ul class="uk-nav nav-color">
                         <li ><a href="/payStation-mobile-webView/home.html"><span uk-icon="icon: home; ratio: 1"></span> Home</a></li>
-                        <li class="uk-active"><a href="/payStation-mobile-webView/recharge_report.html"><span uk-icon="icon: phone; ratio: 1"></span> Recharge Report</a></li>
+                        <li class="uk-active"><a href="/recharge_report.html"><span uk-icon="icon: phone; ratio: 1"></span> Recharge Report</a></li>
                         <li><a href="/payStation-mobile-webView/number_inquiry"><span uk-icon="icon: search; ratio: 1"></span> Number Inquiry</a></li>
                     </ul>
                 </div>
@@ -86,55 +86,94 @@
     </div>
 
     <!-- functional options portion -->
-    <div class="container body uk-overflow-auto">
+    <div class="mx-1 body uk-overflow-auto">
 
-        <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
-            <form>
+        <div class="uk-card uk-card-default uk-card-body px-0 mx-0 uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
+            <h4 class="text-center uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2 uk-text-bold">Showing Reports</h4>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>Date</th>
+                        <th>Number</th>
+                        <th class="px-1">Amount</th>
+                        <th class="px-1">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td>24/12/2020</td>
+                        <td>01712123456</td>
+                        <td class="px-1">200</td>
+                        <td class="font-weight-bold px-1"><a href="/payStation-mobile-webView/full_report.html" class="text-success"> Success </a></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>14/12/2020</td>
+                        <td>01812123456</td>
+                        <td class="px-1">150</td>
+                        <td class="font-weight-bold  px-1">
+                            <a href="/payStation-mobile-webView/full_report.html" class="text-danger">Failed</a>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>7/12/2020</td>
+                        <td>01912123456</td>
+                        <td class="px-1">250</td>
+                        <td class="font-weight-bold text-warning px-1">
+                            <a href="/payStation-mobile-webView/full_report.html" class="text-warning">Pending</a>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>24/12/2020</td>
+                        <td>01712123456</td>
+                        <td class="px-1">200</td>
+                        <td class="font-weight-bold  px-1">
+                            <a href="/payStation-mobile-webView/full_report.html" class="text-success">Success</a>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>24/12/2020</td>
+                        <td>01712123456</td>
+                        <td class="px-1">200</td>
+                        <td class="font-weight-bold px-1">
+                            <a href="/payStation-mobile-webView/full_report.html" class="text-success">Success</a>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>24/12/2020</td>
+                        <td>01712123456</td>
+                        <td class="px-1">200</td>
+                        <td class="font-weight-bold  px-1">
+                            <a href="/payStation-mobile-webView/full_report.html" class="text-danger">Failed</a>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>24/12/2020</td>
+                        <td>01712123456</td>
+                        <td class="px-1">200</td>
+                        <td class="font-weight-bold px-1">
+                            <a href="/payStation-mobile-webView/full_report.html" class="text-success">Success</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <!-- Input for phone number -->
-                <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Operator</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="operator-selection" name="operator">
-                                <option class="option" selected>Select Operator</option>
-                                <option class="option" value="gp">GP</option>
-                                <option class="option" value="robi" id="robi">ROBI</option>
-                                <option class="option" value="banglalink">BANGLALINK</option>
-                                <option class="option" value="airtel">AIRTEL</option>
-                                <option class="option" value="teletalk">TELETALK</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Recharge Status</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="recharge-status" name="status">
-                                <option class="option" selected>Select Status</option>
-                                <option class="option" value="failed">Failed</option>
-                                <option class="option" value="failure">Failure</option>
-                                <option class="option" value="success">Success</option>
-                                <option class="option" value="pending">Pending</option>
-                                <option class="option" value="successful">Successful</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 mb-2">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="from-date" value="" class="form-control" id="from-date">
-                </div>
-
-                <div class="uk-width-1-1">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="to-date" value="" class="form-control" id="to-date">
-                </div>
-
-                <a href="/payStation-mobile-webView/show_report.html"><button class="uk-button uk-button-primary form-control uk-border-rounded mt-4" type="button"
-                    id="recharge">Search</button></a>
-            </form>
+            <nav aria-label="Page navigation example" style="padding: 0px 25vw 0px 25vw">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link text-purple" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link text-purple" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link text-purple" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link text-purple" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link text-purple" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
         </div>
 
         <!-- ad poster or banner portion -->

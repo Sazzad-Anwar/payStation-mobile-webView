@@ -89,52 +89,14 @@
     <div class="container body uk-overflow-auto">
 
         <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
-            <form>
-
-                <!-- Input for phone number -->
-                <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Operator</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="operator-selection" name="operator">
-                                <option class="option" selected>Select Operator</option>
-                                <option class="option" value="gp">GP</option>
-                                <option class="option" value="robi" id="robi">ROBI</option>
-                                <option class="option" value="banglalink">BANGLALINK</option>
-                                <option class="option" value="airtel">AIRTEL</option>
-                                <option class="option" value="teletalk">TELETALK</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Recharge Status</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="recharge-status" name="status">
-                                <option class="option" selected>Select Status</option>
-                                <option class="option" value="failed">Failed</option>
-                                <option class="option" value="failure">Failure</option>
-                                <option class="option" value="success">Success</option>
-                                <option class="option" value="pending">Pending</option>
-                                <option class="option" value="successful">Successful</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 mb-2">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="from-date" value="" class="form-control" id="from-date">
-                </div>
-
-                <div class="uk-width-1-1">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="to-date" value="" class="form-control" id="to-date">
-                </div>
-
-                <a href="/payStation-mobile-webView/show_report.html"><button class="uk-button uk-button-primary form-control uk-border-rounded mt-4" type="button"
-                    id="recharge">Search</button></a>
-            </form>
+            <h4 class="text-center uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom uk-text-bold">Showing Full Reports</h4>
+            <ul class="list-group mt-1">
+                <li class="list-group-item bg-purple text-white">Operator: <b> GrameenPhone</b></li>
+                <li class="list-group-item">Phone Number: <b>01712123456</b></li>
+                <li class="list-group-item">Recharge Amount: <b>200 tk</b></li>
+                <li class="list-group-item">Recharge Status: <b><span class="text-success">Success</span></b></li>
+                <li class="list-group-item">Date: <b>24/12/2020</b></li>
+            </ul>
         </div>
 
         <!-- ad poster or banner portion -->
