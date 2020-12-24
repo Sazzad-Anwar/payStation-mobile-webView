@@ -140,3 +140,7 @@ button:focus {
     top:-85px;
     background: white;
 }
+
+.top-navigation{
+    transition: ease-out 1s;
+}
