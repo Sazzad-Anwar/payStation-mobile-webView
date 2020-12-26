@@ -93,13 +93,51 @@
     <div class="container body uk-overflow-auto">
 
         <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
-            <div class="list-group text-center">
-                <a href="#" class="list-group-item list-group-item-action bg-purple text-white">
-                  Select Operator
-                </a>
-                <a href="/payStation-mobile-webView/cash-in-out.html" class="list-group-item list-group-item-action"><img src="./assets/images/184568.svg" alt="rocket" style="height: 50px;"></a>
-                <a href="/payStation-mobile-webView/cash-in-out.html" class="list-group-item list-group-item-action"><img src="./assets/images/nagad_logo.png" alt="nagad" style="height: 50px;"></a>
-              </div>
+            <form>
+
+                <!-- Input for phone number -->
+                <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Bkash Recharge</h4>
+                <div class="uk-grid-collapse" uk-grid>
+
+                    <div class="uk-width-1-1">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text pr-1 border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
+                            </div>
+                            <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0 pr-0 uk-border-rounded" style="border-left: none;border-right: none;" required autocomplete="off">
+                            <div class="input-group-append">
+                                <span class="form-control p-0 operator left-border-radius-off border-color py-2"><img id='operator_image' style="height: 20px;padding-right: 10px;" alt=""><span id="dropDown"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-width-1-1 mt-4">
+                        <!-- input for recharge amount -->
+                        <div>
+                            <div class="uk-inline uk-width-1-1 ">
+                                <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
+                                    style="height: 30px;padding-top: 10px;;">
+                                <input class="uk-input px-0 uk-border-rounded" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk"
+                                    type="number" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
+    
+                    </div>
+
+                    <div class="uk-width-1-1 mt-4">
+                        <select class="form-control operator border-color py-2" name="type">
+                            <option class="option" value="cash-in">Cash-In</option>
+                            <option class="option" value="cash-out">Cash-Out</option>
+                        </select>
+                    </div>
+
+                </div>
+                <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="phone_number_error"></p>
+
+                <a href="/payStation-mobile-webView/full_report.html"><button class="uk-button uk-button-primary form-control uk-border-rounded mt-4" type="button"
+                    id="recharge">Search</button></a>
+            </form>
         </div>
 
         <!-- ad poster or banner portion -->
