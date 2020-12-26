@@ -93,52 +93,14 @@
     <div class="container body uk-overflow-auto">
 
         <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
-            <form>
-
-                <!-- Input for phone number -->
-                <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Operator</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="operator-selection" name="operator">
-                                <option class="option" selected>Select Operator</option>
-                                <option class="option" value="gp">GP</option>
-                                <option class="option" value="robi" id="robi">ROBI</option>
-                                <option class="option" value="banglalink">BANGLALINK</option>
-                                <option class="option" value="airtel">AIRTEL</option>
-                                <option class="option" value="teletalk">TELETALK</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Recharge Status</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="recharge-status" name="status">
-                                <option class="option" selected>Select Status</option>
-                                <option class="option" value="failed">Failed</option>
-                                <option class="option" value="failure">Failure</option>
-                                <option class="option" value="success">Success</option>
-                                <option class="option" value="pending">Pending</option>
-                                <option class="option" value="successful">Successful</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 mb-2">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="from-date" value="" class="form-control" id="from-date">
-                </div>
-
-                <div class="uk-width-1-1">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="to-date" value="" class="form-control" id="to-date">
-                </div>
-
-                <a href="/payStation-mobile-webView/show_report.html"><button class="uk-button uk-button-primary form-control uk-border-rounded mt-4" type="button"
-                    id="recharge">Search</button></a>
-            </form>
+            <div class="list-group text-center">
+                <a href="#" class="list-group-item list-group-item-action bg-purple text-white">
+                  Select Operator
+                </a>
+                <a href="#" class="list-group-item list-group-item-action"><img src="./assets/images/BKash_logo.svg" alt="bkash" style="height: 50px;"></a>
+                <a href="#" class="list-group-item list-group-item-action"><img src="./assets/images/184568.svg" alt="rocket" style="height: 50px;"></a>
+                <a href="#" class="list-group-item list-group-item-action"><img src="./assets/images/nagad_logo.png" alt="nagad" style="height: 50px;"></a>
+              </div>
         </div>
 
         <!-- ad poster or banner portion -->

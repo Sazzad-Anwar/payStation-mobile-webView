@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/uikit.css">
     <link rel="stylesheet" href="./assets/css/magic.css">
@@ -49,8 +50,8 @@
 
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
 
-                <div class="header">
-                    <img class="text-center" src="./assets/images/Group.png" style="height: 53px;padding: 10px 40px;"
+                <div class="header" style="height: 67px !important;">
+                    <img class="text-center" src="./assets/images/Group.png" style="height: 55px;padding: 10px 50px;"
                         alt="logo">
                 </div>
                 <div class="container mt-5 ml-4">
@@ -58,6 +59,9 @@
                         <li ><a href="/payStation-mobile-webView/home.html"><span uk-icon="icon: home; ratio: 1"></span> Home</a></li>
                         <li class="uk-active"><a href="/payStation-mobile-webView/recharge_report.html"><span uk-icon="icon: phone; ratio: 1"></span> Recharge Report</a></li>
                         <li><a href="/payStation-mobile-webView/number_inquiry.html"><span uk-icon="icon: search; ratio: 1"></span> Number Inquiry</a></li>
+                        <li><a href="/payStation-mobile-webView/pin_change.html"><span uk-icon="icon: pencil; ratio: 1"></span> Change Your Pin</a></li>
+                        <li><a href="/payStation-mobile-webView/daily_statement.html"><i class="lni lni-stats-up"></i></span> Daily Statement</a></li>
+                        <li><a><i class="lni lni-headphone-alt"></i> Help Center 09613820890 <br> (9am To 9pm)</a></li>
                     </ul>
                 </div>
 
@@ -94,35 +98,54 @@
                 <!-- Input for phone number -->
                 <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Mobile Recharge</h4>
             
-                <div class="uk-grid-collapse" uk-grid>
-
-                    <div class="uk-width-3-4">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text pr-1 border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
-                            </div>
-                            <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0 pr-0" style="border-left: none;border-right: none;" required autocomplete="off">
-                            <div class="input-group-append">
-                                <span class="form-control p-0 left-border-radius-off right-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""><span id="dropDown" uk-icon="icon:  chevron-down; ratio: 1"></span></span>
-                            </div>
+                <div class="uk-width-1-1 pb-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text pr-1 border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
+                        </div>
+                        <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0 pr-0" style="border-left: none;border-right: none;" required autocomplete="off">
+                        <div class="input-group-append">
+                            <span class="form-control p-0 left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""><span id="dropDown" uk-icon="icon:  chevron-down; ratio: 1"></span></span>
                         </div>
                     </div>
-
-                    <div class="uk-width-1-4">
-                        <!-- input for recharge amount -->
-                        <div class="uk-margin">
-                            <div class="uk-inline uk-width-1-1 ">
-                                <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
-                                    style="height: 30px;padding-top: 10px;;">
-                                <input class="uk-input left-border-radius-off px-0 uk-border-rounded" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk"
-                                    type="number" autocomplete="off" required>
-                            </div>
-                        </div>
-                    </div>
-
+                    <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="phone_number_error"></p>
                 </div>
 
-                <div class="my-2" id="operator-select">
+                <ul class="uk-subnav uk-subnav-pill" uk-switcher>
+                    <li><a href="#">Amount</a></li>
+                    <li class="pl-1"><a href="#">Voice</a></li>
+                    <li class="pl-1"><a href="#">Internet</a></li>
+                    <li class="pl-1"><a href="#">Bundle</a></li>
+                </ul>
+                
+                <ul class="uk-switcher uk-margin">
+                    <li>
+                        <div class="uk-width-1-1">
+                            <!-- input for recharge amount -->
+                            <div>
+                                <div class="uk-inline uk-width-1-1 ">
+                                    <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
+                                        style="height: 30px;padding-top: 10px;;">
+                                    <input class="uk-input px-0 uk-border-rounded" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk"
+                                        type="number" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
+        
+                        </div>
+                    </li>
+                    <li>
+                        Voice minute
+                    </li>
+                    <li>
+                        Internet Package
+                    </li>
+                    <li>
+                        Bundles
+                    </li>
+                </ul>
+
+                <div id="operator-select">
                     <select class="form-control operator border-color py-2" id="operator-selection" name="operator">
                         <option class="option" value="gp">GP</option>
                         <option class="option" value="robi" id="robi">ROBI</option>
@@ -131,13 +154,12 @@
                         <option class="option" value="teletalk">TELETALK</option>
                     </select>
                 </div>
-                <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
-                <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="phone_number_error"></p>
 
                 
 
                 <!-- input for package type -->
                 <div class="uk-margin">
+                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Package</h4>
                     <select class="uk-select uk-border-rounded text-purple" id="package" required>
                         <option class="text-purple" value="prepaid" selected>Prepaid</option>
                         <option class="text-purple" value="postpaid">Postpaid</option>
@@ -186,7 +208,7 @@
                 </a>
             </div>
             <div class="text-center">
-                <a href="/payStation-mobile-webView/index.html">
+                <a href="/payStation-mobile-webView/mobile_banking.html">
                     <img src="./assets/images/mobile_banking.PNG" class="navIcon" alt="addMoney-logo">
                     <p class="text-white uk-margin-remove-top uk-margin-remove-bottom" style="font-size: 12px;">Mobile
                         Banking</p>

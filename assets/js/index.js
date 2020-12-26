@@ -66,21 +66,13 @@ $(document).ready(function () {
     });
 
     //on focus of inputting phone number & amound the bottom navigation will hide and after focus change bottom navigation will again appear
-    $('#phone_number').focus(() => {
+    $('input').focus(() => {
         $('.bottom').hide()
-    })
+    });
 
-    $('#phone_number').focusout(() => {
+    $('input').focusout(() => {
         $('.bottom').show();
-    })
-
-    $('#amount').focus(() => {
-        $('.bottom').hide();
-    })
-
-    $('#amount').focusout(() => {
-        $('.bottom').show();
-    })
+    });
 
 
     //on input the phone number the operator logo will be shown and operator name will be selected from the option select
@@ -178,6 +170,7 @@ $(document).ready(function () {
     $(window).scroll(function (event) {
         let st = $(this).scrollTop();
         if (st > lastScrollTop) {
+            $('.top-navigation').addClass('uk-animation-slide-top uk-animation-toggle');
             $('.top-navigation').hide();
         } else {
             // upscroll code
@@ -186,7 +179,7 @@ $(document).ready(function () {
         lastScrollTop = st;
     });
 
-    $("#operator-selection, #recharge-status").select2({
+    $("#recharge-status").select2({
         tags: true,
     });
     

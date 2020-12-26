@@ -56,12 +56,13 @@
                 </div>
                 <div class="container mt-5 ml-4">
                     <ul class="uk-nav nav-color">
-                        <li ><a href="/payStation-mobile-webView/home.html"><span uk-icon="icon: home; ratio: 1"></span> Home</a></li>
+                        <li><a href="/payStation-mobile-webView/home.html"><span uk-icon="icon: home; ratio: 1"></span> Home</a></li>
                         <li class="uk-active"><a href="/payStation-mobile-webView/recharge_report.html"><span uk-icon="icon: phone; ratio: 1"></span> Recharge Report</a></li>
                         <li><a href="/payStation-mobile-webView/number_inquiry.html"><span uk-icon="icon: search; ratio: 1"></span> Number Inquiry</a></li>
                         <li><a href="/payStation-mobile-webView/pin_change.html"><span uk-icon="icon: pencil; ratio: 1"></span> Change Your Pin</a></li>
-                        <li><a href="/payStation-mobile-webView/daily_statement.html"><i class="lni lni-stats-up"></i></span> Daily Statement</a></li>
+                        <li><a href="/payStation-mobile-webView/daily_statement.html"><i class="lni lni-stats-up"></i> Daily Statement</a></li>
                         <li><a><i class="lni lni-headphone-alt"></i> Help Center 09613820890 <br> (9am To 9pm)</a></li>
+                        
                     </ul>
                 </div>
 
@@ -93,52 +94,16 @@
     <div class="container body uk-overflow-auto">
 
         <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
-            <form>
-
-                <!-- Input for phone number -->
-                <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Operator</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="operator-selection" name="operator">
-                                <option class="option" selected>Select Operator</option>
-                                <option class="option" value="gp">GP</option>
-                                <option class="option" value="robi" id="robi">ROBI</option>
-                                <option class="option" value="banglalink">BANGLALINK</option>
-                                <option class="option" value="airtel">AIRTEL</option>
-                                <option class="option" value="teletalk">TELETALK</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Recharge Status</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="recharge-status" name="status">
-                                <option class="option" selected>Select Status</option>
-                                <option class="option" value="failed">Failed</option>
-                                <option class="option" value="failure">Failure</option>
-                                <option class="option" value="success">Success</option>
-                                <option class="option" value="pending">Pending</option>
-                                <option class="option" value="successful">Successful</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 mb-2">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="from-date" value="" class="form-control" id="from-date">
-                </div>
-
-                <div class="uk-width-1-1">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="to-date" value="" class="form-control" id="to-date">
-                </div>
-
-                <a href="/payStation-mobile-webView/show_report.html"><button class="uk-button uk-button-primary form-control uk-border-rounded mt-4" type="button"
-                    id="recharge">Search</button></a>
-            </form>
+            <ul class="list-group mt-1">
+                <li class="list-group-item bg-purple text-white text-center uk-text-bold">Today's Statement</li>
+                <li class="list-group-item">Opening Balance: <b>5000.00 tk</b></li>
+                <li class="list-group-item">Received Balance: <b>8000.00 tk</b></li>
+                <li class="list-group-item">Commission: <b> 500.00 tk </b></li>
+                <li class="list-group-item">Sales: <b> 6000.00 tk</b></li>
+                <li class="list-group-item">Daily Charge: <b> 150.00 tk </b></li>
+                <li class="list-group-item">Current Balance: <b> 7000.00 tk </b></li>
+                <a class="list-group-item bg-purple py-0 my-0" href="/payStation-mobile-webView/show_report.html"><li class="list-group-item bg-purple text-white text-center uk-text-bold">Back</li></a>
+            </ul>
         </div>
 
         <!-- ad poster or banner portion -->

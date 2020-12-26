@@ -93,52 +93,45 @@
     <div class="container body uk-overflow-auto">
 
         <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
-            <form>
+            <h4 class="text-center uk-margin-remove-top pt-0 pb-3 text-purple uk-margin-remove-bottom uk-text-bold">Change Pin Number</h4>
+            <form action="">
+                <div class="uk-width-1-1 pb-3">
 
-                <!-- Input for phone number -->
-                <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Operator</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="operator-selection" name="operator">
-                                <option class="option" selected>Select Operator</option>
-                                <option class="option" value="gp">GP</option>
-                                <option class="option" value="robi" id="robi">ROBI</option>
-                                <option class="option" value="banglalink">BANGLALINK</option>
-                                <option class="option" value="airtel">AIRTEL</option>
-                                <option class="option" value="teletalk">TELETALK</option>
-                            </select>
+                    <!-- old pin input -->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text pr-1 border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: lock"></span></span>
                         </div>
-                    </div>
-
-                    <div class="uk-width-1-1">
-                        <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Recharge Status</h4>
-                        <div class="mb-2">
-                            <select class="form-control operator border-color" id="recharge-status" name="status">
-                                <option class="option" selected>Select Status</option>
-                                <option class="option" value="failed">Failed</option>
-                                <option class="option" value="failure">Failure</option>
-                                <option class="option" value="success">Success</option>
-                                <option class="option" value="pending">Pending</option>
-                                <option class="option" value="successful">Successful</option>
-                            </select>
-                        </div>
+                        <input type="text" placeholder="Old Pin Number" id="pin_number" class="form-control border-color pl-0 pr-0 uk-border-rounded" style="border-left: none;" required autocomplete="off">
                     </div>
                 </div>
 
-                <div class="uk-width-1-1 mb-2">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="from-date" value="" class="form-control" id="from-date">
+                <div class="uk-width-1-1 pb-3">
+
+                    <!-- new pin input -->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text pr-1 border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: lock"></span></span>
+                        </div>
+                        <input type="text" placeholder="New Pin Number" id="new_pin_number" class="form-control border-color pl-0 pr-0 uk-border-rounded" style="border-left: none;" required autocomplete="off">
+                    </div>
                 </div>
 
-                <div class="uk-width-1-1">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">From Date</h4>
-                    <input type="date" name="to-date" value="" class="form-control" id="to-date">
+                <div class="uk-width-1-1 pb-3">
+
+                    <!-- confirm pin input -->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text pr-1 border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: lock"></span></span>
+                        </div>
+                        <input type="text" placeholder="Confirm Pin Number" id="confirm_pin_number" class="form-control border-color pl-0 pr-0 uk-border-rounded" style="border-left: none;" required autocomplete="off">
+                    </div>
                 </div>
 
-                <a href="/payStation-mobile-webView/show_report.html"><button class="uk-button uk-button-primary form-control uk-border-rounded mt-4" type="button"
-                    id="recharge">Search</button></a>
+                <button class="uk-button uk-button-primary form-control uk-border-rounded" type="submit" id="recharge">Save</button>
+
             </form>
+            
         </div>
 
         <!-- ad poster or banner portion -->
