@@ -132,11 +132,22 @@
                         <div class="uk-width-1-1">
                             <!-- input for recharge amount -->
                             <div>
-                                <div class="uk-inline uk-width-1-1 ">
-                                    <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
-                                        style="height: 30px;padding-top: 10px;;">
-                                    <input class="uk-input px-0 uk-border-rounded" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk"
-                                        type="number" autocomplete="off" required>
+                                <div class="uk-inline d-flex">
+                                    <div>
+                                        <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
+                                            style="height: 30px;padding-top: 10px;">
+                                        <input class="uk-input px-0 uk-border-rounded right-border-radius-off" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk" type="number" autocomplete="off" required>
+                                    </div>
+                                    <div>
+                                        <select class="uk-select uk-border-rounded left-border-radius-off text-purple" id="package" style="height: 42px;padding: 0px 0px 0px 30px !important;" required>
+                                            <option class="text-purple" value="prepaid" selected>Prepaid</option>
+                                            <option class="text-purple" value="postpaid">Postpaid</option>
+                                            <option id="skitto" class="text-purple uk-hidden" value="skitto">Skitto</option>
+                                            <option id="gstore" class="text-purple uk-hidden" value="gstore">G-store</option>
+                                            <option id="tong" class="text-purple uk-hidden" value="tong">Tong</option>
+                                            <option id="amarOffer" class="text-purple uk-hidden" value="amarOffer">Amar Offer</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
@@ -155,7 +166,7 @@
                 </ul>
 
                 <!-- input for package type -->
-                <div class="uk-margin">
+                <!-- <div class="uk-margin">
                     <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Package</h4>
                     <select class="uk-select uk-border-rounded text-purple" id="package" required>
                         <option class="text-purple" value="prepaid" selected>Prepaid</option>
@@ -165,7 +176,7 @@
                         <option id="tong" class="text-purple uk-hidden" value="tong">Tong</option>
                         <option id="amarOffer" class="text-purple uk-hidden" value="amarOffer">Amar Offer</option>
                     </select>
-                </div>
+                </div> -->
 
                 <button class="uk-button uk-button-primary form-control uk-border-rounded" type="submit"
                     id="recharge">Recharge</button>
