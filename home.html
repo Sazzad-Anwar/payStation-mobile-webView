@@ -92,8 +92,8 @@
     <!-- functional options portion -->
     <div class="container body uk-overflow-auto">
 
-        <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
-            <form>
+        <form>
+            <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
 
                 <!-- Input for phone number -->
                 <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Mobile Recharge</h4>
@@ -120,14 +120,15 @@
                     </select>
                 </div>
 
-                <ul class="uk-subnav uk-subnav-pill text-center" uk-switcher>
-                    <li><a href="#" class="px-1">Amount</a></li>
-                    <li class="px-2"><a href="#" class="px-1">Voice</a></li>
-                    <li class="px-2"><a href="#" class="px-1">Internet</a></li>
-                    <li class="px-2"><a href="#" class="px-1">Bundle</a></li>
+            </div>  
+            <div class="uk-card border uk-card-default uk-card-body p-0 uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3">
+                <ul class="text-center uk-subnav ml-0 uk-subnav-pill uk-button uk-button-primary uk-border-rounded" uk-switcher style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+                    <li class="pl-3 text-center"><a href="#" class="pl-1">Amount</a></li>
+                    <li class="pl-3"><a href="#" class="pl-1">Voice</a></li>
+                    <li class="pl-3"><a href="#" class="pl-1">Internet</a></li>
+                    <li class="pl-3"><a href="#" class="pl-1">Bundle</a></li>
                 </ul>
-                
-                <ul class="uk-switcher uk-margin">
+                <ul class="uk-switcher uk-margin px-3">
                     <li>
                         <div class="uk-width-1-1">
                             <!-- input for recharge amount -->
@@ -139,7 +140,7 @@
                                         <input class="uk-input px-0 uk-border-rounded right-border-radius-off" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk" type="number" autocomplete="off" required>
                                     </div>
                                     <div>
-                                        <select class="uk-select uk-border-rounded left-border-radius-off text-purple" id="package" style="height: 42px;padding: 0px 20px 0px 0px !important;" required>
+                                        <select class="uk-select uk-border-rounded left-border-radius-off text-purple" id="package" style="height: 42px;padding: 0px 30px 0px 0px !important;" required>
                                             <option class="text-purple" value="prepaid" selected>Prepaid</option>
                                             <option class="text-purple" value="postpaid">Postpaid</option>
                                             <option id="skitto" class="text-purple uk-hidden" value="skitto">Skitto</option>
@@ -172,11 +173,9 @@
                         Bundles
                     </li>
                 </ul>
-
-                <button class="uk-button uk-button-primary form-control uk-border-rounded" type="submit"
-                    id="recharge">Recharge</button>
-            </form>
-        </div>
+                <button class="uk-button uk-button-primary form-control uk-border-rounded" style="border-top-left-radius: 0px;border-top-right-radius: 0px;" type="submit" id="recharge">Recharge</button>
+            </div>
+        </form>
 
         <!-- ad poster or banner portion -->
         <div class="uk-position-relative uk-visible-toggle shadow-none uk-light" tabindex="-1" uk-slideshow="animation: pull;autoplay:true;autoplay-interval:4000">
