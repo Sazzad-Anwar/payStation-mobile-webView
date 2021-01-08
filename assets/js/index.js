@@ -86,6 +86,14 @@ $(document).ready(function () {
             $("#gstore").addClass('uk-hidden');
             $("#tong").addClass('uk-hidden');
             $("#amarOffer").addClass('uk-hidden');
+
+            //offer showing
+            $("#bl-offer").addClass('uk-hidden');
+            $("#artl-offer").addClass('uk-hidden');
+            $("#tltk-offer").addClass('uk-hidden');
+            $("#rb-offer").addClass('uk-hidden');
+            $("#gp-offer").removeClass('uk-hidden');
+
         } else if ((($('#phone_number').val()).toString()).startsWith('018')) {
             $("select option[value='robi']").attr('selected', "selected");
             $("#operator_image").attr("src", "./assets/images/robilogo.png")
@@ -93,6 +101,14 @@ $(document).ready(function () {
             $("#gstore").removeClass('uk-hidden');
             $("#tong").addClass('uk-hidden');
             $("#amarOffer").addClass('uk-hidden');
+
+            //offer showing
+            $("#bl-offer").addClass('uk-hidden');
+            $("#artl-offer").addClass('uk-hidden');
+            $("#tltk-offer").addClass('uk-hidden');
+            $("#rb-offer").removeClass('uk-hidden');
+            $("#gp-offer").addClass('uk-hidden');
+
         } else if ((($('#phone_number').val()).toString()).startsWith('016')) {
             $("select option[value='airtel']").attr('selected', "selected");
             $("#operator_image").attr("src", "./assets/images/Airtel_logo.svg")
@@ -100,6 +116,14 @@ $(document).ready(function () {
             $("#gstore").addClass('uk-hidden');
             $("#tong").removeClass('uk-hidden');
             $("#amarOffer").addClass('uk-hidden');
+
+            //offer showing
+            $("#bl-offer").addClass('uk-hidden');
+            $("#artl-offer").removeClass('uk-hidden');
+            $("#tltk-offer").addClass('uk-hidden');
+            $("#rb-offer").addClass('uk-hidden');
+            $("#gp-offer").addClass('uk-hidden');
+
         } else if ((($('#phone_number').val()).toString()).startsWith('019') || (($('#phone_number').val()).toString()).startsWith('014')) {
             $("select option[value='banglalink']").attr('selected', "selected");
             $("#operator_image").attr("src", "./assets/images/Banglalink_logo.png")
@@ -107,12 +131,35 @@ $(document).ready(function () {
             $("#gstore").addClass('uk-hidden');
             $("#tong").addClass('uk-hidden');
             $("#amarOffer").removeClass('uk-hidden');
+
+            //offer showing
+            $("#bl-offer").removeClass('uk-hidden');
+            $("#artl-offer").addClass('uk-hidden');
+            $("#tltk-offer").addClass('uk-hidden');
+            $("#rb-offer").addClass('uk-hidden');
+            $("#gp-offer").addClass('uk-hidden');
+
         } else if ((($('#phone_number').val()).toString()).startsWith('015')) {
             $("select option[value='teletalk']").attr('selected', "selected");
             $("#operator_image").attr("src", "./assets/images/teletalk_logo.svg");
+
+            //offer showing
+            $("#bl-offer").addClass('uk-hidden');
+            $("#artl-offer").addClass('uk-hidden');
+            $("#tltk-offer").removeClass('uk-hidden');
+            $("#rb-offer").addClass('uk-hidden');
+            $("#gp-offer").addClass('uk-hidden');
+
         } else {
             $("#operator_image").attr("src", " ");
             phoneNumberError.innerHTML = 'Invalid phone number';
+
+            //offer showing
+            $("#bl-offer").addClass('uk-hidden');
+            $("#artl-offer").addClass('uk-hidden');
+            $("#tltk-offer").addClass('uk-hidden');
+            $("#rb-offer").addClass('uk-hidden');
+            $("#gp-offer").addClass('uk-hidden');
         }
     });
 
@@ -135,6 +182,9 @@ $(document).ready(function () {
             $("#gstore").addClass('uk-hidden');
             $("#tong").addClass('uk-hidden');
             $("#amarOffer").addClass('uk-hidden');
+
+            
+
         } else if ($("#operator-selection").val() === 'airtel') {
             $("#operator_image").attr("src", "./assets/images/Airtel_logo.svg");
             $("#skitto").addClass('uk-hidden');
