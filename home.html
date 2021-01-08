@@ -140,8 +140,7 @@
                                     </div>
                                     <div>
                                         <select class="uk-select uk-border-rounded left-border-radius-off text-purple" id="package" style="height: 42px;padding: 0px 20px 0px 0px !important;" required>
-                                            <option class="text-purple" selected>Package</option>
-                                            <option class="text-purple" value="prepaid">Prepaid</option>
+                                            <option class="text-purple" value="prepaid" selected>Prepaid</option>
                                             <option class="text-purple" value="postpaid">Postpaid</option>
                                             <option id="skitto" class="text-purple uk-hidden" value="skitto">Skitto</option>
                                             <option id="gstore" class="text-purple uk-hidden" value="gstore">G-store</option>
@@ -152,7 +151,15 @@
                                 </div>
                             </div>
                             <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="amount_error"></p>
-        
+                            <div class="my-3 text-center">
+                                <button class="uk-button uk-button-primary uk-border-rounded px-2 py-0">50</button>
+                                <button class="uk-button uk-button-primary uk-border-rounded px-2 py-0">100</button>
+                                <button class="uk-button uk-button-primary uk-border-rounded px-2 py-0">200</button>
+                                <button class="uk-button uk-button-primary uk-border-rounded px-2 py-0">300</button>
+                                <button class="uk-button uk-button-primary uk-border-rounded px-2 py-0">500</button>
+                            </div>
+
+                            <div class="text-purple text-center">Usable Amount: <img src="./assets/images/tk.svg" alt="logo" style="height: 20px;padding-bottom: 5px;">  880.94  </div>
                         </div>
                     </li>
                     <li>
@@ -165,19 +172,6 @@
                         Bundles
                     </li>
                 </ul>
-
-                <!-- input for package type -->
-                <!-- <div class="uk-margin">
-                    <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Select Package</h4>
-                    <select class="uk-select uk-border-rounded text-purple" id="package" required>
-                        <option class="text-purple" value="prepaid" selected>Prepaid</option>
-                        <option class="text-purple" value="postpaid">Postpaid</option>
-                        <option id="skitto" class="text-purple uk-hidden" value="skitto">Skitto</option>
-                        <option id="gstore" class="text-purple uk-hidden" value="gstore">G-store</option>
-                        <option id="tong" class="text-purple uk-hidden" value="tong">Tong</option>
-                        <option id="amarOffer" class="text-purple uk-hidden" value="amarOffer">Amar Offer</option>
-                    </select>
-                </div> -->
 
                 <button class="uk-button uk-button-primary form-control uk-border-rounded" type="submit"
                     id="recharge">Recharge</button>
