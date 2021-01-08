@@ -93,25 +93,25 @@
     <div class="container body uk-overflow-auto">
 
         <form>
-            <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-3">
+            <div class="uk-card border uk-card-default uk-card-body uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3 p-0">
 
                 <!-- Input for phone number -->
-                <h4 class="uk-margin-remove-top pt-0 text-purple uk-margin-remove-bottom pb-2">Mobile Recharge</h4>
+                <h4 class="uk-margin-remove-top text-center uk-border-rounded text-white uk-margin-remove-bottom py-2 bg-purple" style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">Mobile Recharge</h4>
             
-                <div class="uk-width-1-1 pb-3">
+                <div class="uk-width-1-1 p-3 pb-4">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text pr-1 border-color right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
+                            <span class="input-group-text pr-1 border-color border_bottom_only right-border-radius-off" id="basic-addon1" style="background-color: #fff;"><span class="py-1 text-purple" uk-icon="icon: phone"></span></span>
                         </div>
-                        <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border-color pl-0 pr-0" style="border-left: none;border-right: none;" required autocomplete="off">
+                        <input type="tel" placeholder="Phone Number" id="phone_number" class="form-control border_bottom_only border-color pl-0 pr-0" style="border-left: none;border-right: none;" required autocomplete="off">
                         <div class="input-group-append">
-                            <span class="form-control p-0 left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""><span id="dropDown" uk-icon="icon:  chevron-down; ratio: 1"></span></span>
+                            <span class="form-control p-0 border_bottom_only left-border-radius-off operator border-color py-2"><img id='operator_image' style="height: 20px;" alt=""><span id="dropDown" uk-icon="icon:  chevron-down; ratio: 1"></span></span>
                         </div>
                     </div>
                     <p class="uk-margin-remove-top uk-margin-remove-bottom text-purple" id="phone_number_error"></p>
                 </div>
                 <div id="operator-select">
-                    <select class="form-control operator border-color py-2" id="operator-selection" name="operator">
+                    <select class="form-control operator  border-color py-2" id="operator-selection" name="operator">
                         <option class="option" value="gp">GP</option>
                         <option class="option" value="robi" id="robi">ROBI</option>
                         <option class="option" value="banglalink">BANGLALINK</option>
@@ -122,11 +122,11 @@
 
             </div>  
             <div class="uk-card border uk-card-default uk-card-body p-0 uk-border-rounded shadow-lg uk-box-shadow-xlarge mb-3">
-                <ul class="text-center uk-subnav ml-0 uk-subnav-pill uk-button uk-button-primary uk-border-rounded" uk-switcher style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
-                    <li class="pl-3 text-center"><a href="#" class="pl-1">Amount</a></li>
-                    <li class="pl-3"><a href="#" class="pl-1">Voice</a></li>
-                    <li class="pl-3"><a href="#" class="pl-1">Internet</a></li>
-                    <li class="pl-3"><a href="#" class="pl-1">Bundle</a></li>
+                <ul class="text-center uk-subnav ml-0 pl-2 py-0 uk-subnav-pill uk-button uk-button-primary uk-border-rounded" uk-switcher style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+                    <li class="pl-2 text-center"><a href="#" class="pl-0 py-0" style="font-size: 15px;">Amount</a></li>
+                    <li class="pl-2 text-center"><a href="#" class="pl-0 py-0" style="font-size: 15px;">Voice</a></li>
+                    <li class="pl-2 text-center"><a href="#" class="pl-0 py-0" style="font-size: 15px;">Internet</a></li>
+                    <li class="pl-2 text-center"><a href="#" class="pl-0 py-0" style="font-size: 15px;">Bundle</a></li>
                 </ul>
                 <ul class="uk-switcher uk-margin px-3">
                     <li>
@@ -137,10 +137,10 @@
                                     <div>
                                         <img class="uk-form-icon" src="./assets/images/tk.svg" alt="tk-icon"
                                             style="height: 30px;padding-top: 10px;">
-                                        <input class="uk-input px-0 uk-border-rounded right-border-radius-off" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk" type="number" autocomplete="off" required>
+                                        <input class="uk-input px-0 uk-border-rounded border_bottom_only right-border-radius-off" style="height: 42px;padding: 0px 0px 0px 30px !important;" name="amount" id="amount" placeholder="tk" type="number" autocomplete="off" required>
                                     </div>
                                     <div>
-                                        <select class="uk-select uk-border-rounded left-border-radius-off text-purple" id="package" style="height: 42px;padding: 0px 30px 0px 0px !important;" required>
+                                        <select class="uk-select uk-border-rounded border_bottom_only left-border-radius-off text-purple" id="package" style="height: 42px;padding: 0px 30px 0px 0px !important;" required>
                                             <option class="text-purple" value="prepaid" selected>Prepaid</option>
                                             <option class="text-purple" value="postpaid">Postpaid</option>
                                             <option id="skitto" class="text-purple uk-hidden" value="skitto">Skitto</option>

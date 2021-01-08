@@ -17,6 +17,12 @@
     padding: 4px !important;
 }
 
+.border_bottom_only{
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
 .text-purple {
     color: #652B82 !important;
 }
